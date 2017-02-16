@@ -8,7 +8,19 @@ export default new Router({
   base: '/',
   scrollBehavior: () => ({y: 0}),
   routes: [
-    {path: '/', name: 'home', component: require('../home/home.vue')},
-    {path: '/test', name: 'test', component: require('../test/test.vue')}
+    {
+      path: '/',
+      name: 'home',
+      component: function (resolve) {
+        require(['../home/home.vue'], resolve)
+      }
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: function (resolve) {
+        require(['../test/test.vue'], resolve)
+      }
+    }
   ]
 });
