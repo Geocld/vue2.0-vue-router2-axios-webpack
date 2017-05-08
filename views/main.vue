@@ -31,9 +31,11 @@
 
 <script>
   import router from './_router';
+  import store from './_store';
 
   export default {
     router,
+    store,
     data: function () {
       return {
         channel: null,
