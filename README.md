@@ -18,3 +18,15 @@ build:
 ```
  npm run build
 ```
+### tip:###
+
+2.0+的vue-cli的dist目录下的打包文件无法直接在本地已file://的形式打开，需要在服务器容器中打开：
+
+```
+1.cd dist
+2.npm install -g http-server
+3.fs
+```
+
+
+
